@@ -74,6 +74,30 @@ def instantiate_selector(cfg: Dict[str, Any]):
     params = cfg.get("params", {})
     return cfg.get("alias", cls_name), cls(**params)
 
+def add_daily_txt_handler(
+    trade_date: pd.Timestamp | None = None,
+    log_dir: Path | str = "results",
+):
+    """
+    新增一个按交易日命名的 txt 日志文件
+    路径：results/YYYYMMDD.txt
+    """
+    if trade_date is None:
+        trade_date = pd.Timestamp.today()
+
+    log_dir = Path(log_dir)
+    log_dir.mkdir(parents=True, exist_ok=True)
+
+    log_path = log_dir / f"{trade_date.strftime('%Y%m%d')}.txt"
+
+    handler = logging.FileHandler(log_path, encoding="utf-8")
+    handler.setLevel(logging.INFO)
+    # 只输出消息内容，不包含时间、级别等信息
+    handler.setFormatter(logging.Formatter("%(message)s"))
+
+    logger.addHandler(handler)
+    logger.info("日志同时写入文件: %s", log_path)
+
 
 # ---------- 主函数 ----------
 
@@ -112,6 +136,8 @@ def main():
     )
     if not args.date:
         logger.info("未指定 --date，使用最近日期 %s", trade_date.date())
+
+    add_daily_txt_handler(trade_date)
 
     # --- 加载 Selector 配置 ---
     selector_cfgs = load_config(Path(args.config))

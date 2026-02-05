@@ -2,7 +2,7 @@
   "selectors": [
     {
       "class": "BBIKDJSelector",
-      "alias": "少妇战法",
+      "alias": "前期战法",
       "activate": true,
       "params": {
         "j_threshold": 15,

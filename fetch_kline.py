@@ -192,12 +192,14 @@ def main():
     # ---------- Tushare Token ---------- #
     os.environ["NO_PROXY"] = "api.waditu.com,.waditu.com,waditu.com"
     os.environ["no_proxy"] = os.environ["NO_PROXY"]
-    ts_token = os.environ.get("TUSHARE_TOKEN")
-    if not ts_token:
-        raise ValueError("请先设置环境变量 TUSHARE_TOKEN，例如：export TUSHARE_TOKEN=你的token")
-    ts.set_token(ts_token)
+    #ts_token = os.environ.get("TUSHARE_TOKEN")
+    #if not ts_token:
+        #raise ValueError("请先设置环境变量 TUSHARE_TOKEN，例如：export TUSHARE_TOKEN=你的token")
+    #ts.set_token(ts_token)
     global pro
     pro = ts.pro_api()
+    pro._DataApi__token    = "803773065895874560" #803773065895874560
+    pro._DataApi__http_url = "http://tushare.top/dataapi" # 这里固定值，原封不动拷贝
 
     # ---------- 日期解析 ---------- #
     start = dt.date.today().strftime("%Y%m%d") if str(args.start).lower() == "today" else args.start
