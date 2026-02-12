@@ -808,3 +808,12 @@
 2026-02-06 14:02:11,977 [INFO] fetch_kline.py:139 从 stocklist.csv 读取到 3068 只股票（排除板块：bj,gem,star）
 2026-02-06 14:02:11,978 [INFO] fetch_kline.py:219 开始抓取 3068 支股票 | 数据源:Tushare(日线,qfq) | 日期:20250101 → 20260206 | 排除:bj,gem,star
 2026-02-06 14:08:16,693 [INFO] fetch_kline.py:239 全部任务完成，数据已保存至 /Users/chengyanbo/StockTradebyZ/data
+2026-02-09 14:22:01,350 [INFO] fetch_kline.py:139 从 stocklist.csv 读取到 3068 只股票（排除板块：bj,gem,star）
+2026-02-09 14:22:01,351 [INFO] fetch_kline.py:219 开始抓取 3068 支股票 | 数据源:Tushare(日线,qfq) | 日期:20250101 → 20260209 | 排除:bj,gem,star
+2026-02-09 14:28:14,009 [INFO] fetch_kline.py:239 全部任务完成，数据已保存至 /Users/chengyanbo/StockTradebyZ/data
+2026-02-11 20:05:16,635 [INFO] fetch_kline.py:139 从 stocklist.csv 读取到 3068 只股票（排除板块：bj,gem,star）
+2026-02-11 20:05:16,636 [INFO] fetch_kline.py:219 开始抓取 3068 支股票 | 数据源:Tushare(日线,qfq) | 日期:20250101 → 20260211 | 排除:bj,gem,star
+2026-02-11 20:11:51,883 [INFO] fetch_kline.py:239 全部任务完成，数据已保存至 /Users/chengyanbo/StockTradebyZ/data
+2026-02-12 13:03:43,396 [INFO] fetch_kline.py:139 从 stocklist.csv 读取到 3068 只股票（排除板块：bj,gem,star）
+2026-02-12 13:03:43,396 [INFO] fetch_kline.py:219 开始抓取 3068 支股票 | 数据源:Tushare(日线,qfq) | 日期:20250101 → 20260212 | 排除:bj,gem,star
+2026-02-12 13:10:00,856 [INFO] fetch_kline.py:239 全部任务完成，数据已保存至 /Users/chengyanbo/StockTradebyZ/data
